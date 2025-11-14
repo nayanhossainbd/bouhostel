@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Services</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: whitesmoke;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---------- Header and Navbar ---------- */
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a {
+    color: #0e3d6b;
+    font-size: 18px;
+    font-family: BBH Sans Bartle;
+    margin-right: 40px;
+    transition: all 0.3s ease;
+    float: left;
+}
+
+header a:hover {
+    background-color: #118bd1;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+}
+.login{
+    float: left;
+    margin-top: -28px;
+    padding-left: 1300px;
+    display: flex;
+}
+
+/* ---------- Animation ---------- */
+.wrap .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+nav :nth-child(1),
+nav :nth-child(2),
+nav :nth-child(3),
+nav :nth-child(4),
+nav :nth-child(5)
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+
+    /* ---------- Menu Section ---------- */
+    .menu-section {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .menu-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .menu-container {
+      width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .menu-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 10px;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .menu-item h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .menu-item p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .menu-item span {
+      display: block;
+      font-weight: bold;
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer4 {
+      width: 100%;
+      background-color: rgb(9, 90, 122);
+      text-align: center;
+      color: #c8d2e3;
+      padding: 10px 0;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="room.html">Room</a>
+            <a href="food.html">Food</a>
+            <a href="payment.html">Payment</a>
+            <a href="Contract.html">Contract</a>
+            <div class="login">
+                <a href="login.html">Login</a>
+            <a href="registation.html">Registation</a>
+            </div>
+        </nav>
+    </header>
+
+  <section class="menu-section">
+    <h2>Room Services</h2>
+
+    <a href="####">
+    <div class="menu-container">
+      <div class="menu-item">
+        
+          <img src="images/room1.jpg" alt="Biriyani">      <h3>Room</h3>
+        <p>A room is where comfort meets your personal space.</p>
+        <span>2500৳</span>
+      </div>
+    </a>
+
+      <a href="####">
+      <div class="menu-item">
+        <img src="images/room2.jpg" alt="Rice">
+        <h3>Room</h3>
+        <p>Every room tells the story of its owner."</p>
+        <span>2000৳</span>
+      </div>
+      </a>
+
+      <a href="####">
+      <div class="menu-item">
+        <img src="images/room3.jpg" alt="Mutton">
+        <h3>Room</h3>
+        <p>A room is more than walls; it’s a world of memories.</p>
+        <span>1800৳</span>
+      </div>
+      </a>
+
+      <a href="####">
+      <div class="menu-item">
+        <img src="images/room4.jpg" alt="Fish">
+        <h3>Room</h3>
+        <p>The right room can change your mood instantly.</p>
+        <span>1700৳</span>
+      </div>
+      </a>
+
+      <a href="####">
+      <div class="menu-item">
+        <img src="images/room5.jpg" alt="Drinks">
+        <h3>Room</h3>
+        <p>A room becomes home when it holds your heart.</p>
+        <span>1600৳</span>
+      </div>
+      </a>
+
+      <a href="####">
+      <div class="menu-item">
+        <img src="images/room6.jpg" alt="Fast_Food">
+        <h3>Room</h3>
+        <p>A room is a silent witness to life’s everyday moments.</p>
+        <span>1500৳</span>
+      </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="footer4">
+    <h2>&copy; 2025 Bangladesh Open University. All Rights Reserved.</h2>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------- Header and Navbar ---------- */
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a {
+    color: white;
+    font-size: 18px;
+    font-family: BBH Sans Bartle;
+    margin-right: 40px;
+    transition: all 0.3s ease;
+    float: left;
+}
+
+header a:hover {
+    background-color: white;
+    color: #118bd1;
+    border-radius: 5px;
+    padding: 8px;
+}
+.login{
+    float: left;
+    margin-top: -28px;
+    padding-left: 1300px;
+    display: flex;
+}
+
+/* ---------- Carousel ---------- */
+.wrap {
+    height: 100vh;
+    margin-top: -80px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrap .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.wrap .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- Content Box ---------- */
+.wrap .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 0 5px 10px #0004;
+
+    /* Transparent box with border */
+    background: rgba(16, 172, 238, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+/* Hover effect on box */
+.wrap .list .item .content:hover {
+    background: rgba(6, 91, 151, 0.479);
+    border-color: white;
+    box-shadow: 0 0 15px rgba(223, 89, 17, 0.5);
+}
+
+.wrap .list .item .author {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.wrap .list .item .title,
+.wrap .list .item .topic {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.wrap .list .item .topic {
+    color:white;
+}
+
+.wrap .list .item .des {
+    font-size: 15px;
+    line-height: 1.6em;
+    margin-top: 10px;
+}
+
+/* ---------- Buttons ---------- */
+.wrap .list .item .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.wrap .list .item .buttons a {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 9px;
+    transition: all 0.3s ease;
+}
+
+.wrap .list .item .buttons a:hover {
+    color: white;
+    background-color: #1bc0f3;
+}
+
+.wrap .list .item .buttons a:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+}
+
+.wrap .list .item .buttons a:nth-child(2):hover {
+    color: white;
+    background-color: #1bc0f3;
+}
+
+/* ---------- Animation ---------- */
+.wrap .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+nav :nth-child(1),
+nav :nth-child(2),
+nav :nth-child(3),
+nav :nth-child(4),
+nav :nth-child(5),
+.wrap .list .item:nth-child(1) .content .author,
+.wrap .list .item:nth-child(1) .content .title,
+.wrap .list .item:nth-child(1) .content .topic,
+.wrap .list .item:nth-child(1) .content .des,
+.wrap .list .item:nth-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+/* ---------- Animation Timing ---------- */
+.wrap .list .item:nth-child(1) .content .title {
+    animation-delay: 1.2s !important;
+}
+.wrap .list .item:nth-child(1) .content .topic {
+    animation-delay: 1.4s !important;
+}
+.wrap .list .item:nth-child(1) .content .des {
+    animation-delay: 1.6s !important;
+}
+.wrap .list .item:nth-child(1) .content .buttons {
+    animation-delay: 1.8s !important;
+}

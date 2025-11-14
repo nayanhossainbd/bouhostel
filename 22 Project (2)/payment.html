@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Services</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: whitesmoke;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---------- Header and Navbar ---------- */
+    header {
+      width: 1140px;
+      max-width: 80%;
+      margin: auto;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header a {
+      color: #0e3d6b;
+      font-size: 18px;
+      margin-right: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    header a:hover {
+      background-color: #118bd1;
+      color: white;
+      border-radius: 5px;
+      padding: 8px;
+    }
+
+    .login {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* ---------- Menu Section ---------- */
+    .menu-section {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .menu-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .menu-container {
+      width: 1000px;
+      max-width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      overflow: hidden;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      background-color: #f8f8f8;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .menu-item h3 {
+      margin: 10px 0 5px 0;
+      color: #333;
+    }
+
+    .menu-item p {
+      margin: 0 10px 15px 10px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer4 {
+      width: 100%;
+      background-color: rgb(9, 90, 122);
+      text-align: center;
+      color: #c8d2e3;
+      padding: 10px 0;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+
+    /* ---------- Responsive Navbar ---------- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+      }
+
+      .login {
+        margin-top: 10px;
+      }
+
+      header a {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="room.html">Room</a>
+      <a href="food.html">Food</a>
+      <a href="payment.html">Payment</a>
+      <a href="Contract.html">Contract</a>
+    </nav>
+    <div class="login">
+      <a href="login.html">Login</a>
+      <a href="registation.html">Registration</a>
+    </div>
+  </header>
+    
+  <section class="menu-section">
+    <h2>Payment Method</h2>
+
+    <div class="menu-container">
+
+      <a href="#" style="text-decoration:none;">
+        <div class="menu-item">
+          <img src="images/bkash.png" alt="bKash">
+          <h3>Bkash</h3>
+          <p>A leading mobile financial service in Bangladesh offering fast, secure digital transactions.</p>
+        </div>
+      </a>
+
+      <a href="#" style="text-decoration:none;">
+        <div class="menu-item">
+          <img src="images/rocket.png" alt="Rocket">
+          <h3>Rocket</h3>
+          <p>Dutch-Bangla Bank’s mobile banking platform enabling convenient financial services via phone.</p>
+        </div>
+      </a>
+
+      <a href="#" style="text-decoration:none;">
+        <div class="menu-item">
+          <img src="images/nagad.png" alt="Nagad">
+          <h3>Nagad</h3>
+          <p>A government-backed digital payment service providing affordable and efficient mobile transactions.</p>
+        </div>
+      </a>
+
+      <a href="#" style="text-decoration:none;">
+        <div class="menu-item">
+          <img src="images/visa.png" alt="Visa">
+          <h3>Visa</h3>
+          <p>A global payment network enabling secure electronic funds transfers worldwide.</p>
+        </div>
+      </a>
+
+      <a href="#" style="text-decoration:none;">
+        <div class="menu-item">
+          <img src="images/mastercard.png" alt="MasterCard">
+          <h3>MasterCard</h3>
+          <p>An international financial network offering seamless and secure digital payment solutions.</p>
+        </div>
+      </a>
+
+      <a href="#" style="text-decoration:none;">
+        <div class="menu-item">
+          <img src="images/paytm.png" alt="Paytm">
+          <h3>Paytm</h3>
+          <p>An Indian fintech platform for mobile payments, banking, and digital financial services.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="footer4">
+    <p>&copy; 2025 Bangladesh Open University. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

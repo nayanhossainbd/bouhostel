@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+    body { 
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      background: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0e3d6b;
+      font-size: 16px;
+      margin-right: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #118bd1;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+    }
+
+    .login a { margin-left: 15px; }
+
+    /* Form Wrapper */
+    .formbold-main-wrapper {
+      flex: 1; /* takes available vertical space */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .formbold-form-wrapper {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .formbold-form-title h2 { 
+      font-size: 28px; 
+      color: #07074d; 
+      margin-bottom: 10px; 
+      text-align: center;
+    }
+
+    .formbold-form-title p { 
+      font-size: 16px; 
+      color: #536387; 
+      margin-bottom: 20px; 
+      text-align: center;
+    }
+
+    .formbold-form-group { margin-bottom: 15px; }
+
+    .formbold-form-input {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 5px;
+      border: 1px solid #dde3ec;
+      font-size: 16px;
+      color: #536387;
+      outline: none;
+    }
+
+    .formbold-form-input:focus {
+      border-color: #6a64f1;
+      box-shadow: 0px 3px 8px rgba(0,0,0,0.05);
+    }
+
+    .formbold-form-label { 
+      display: block; 
+      margin-bottom: 8px; 
+      font-size: 14px; 
+      color: #536387; 
+    }
+
+    .formbold-checkbox-label { 
+      display: flex; 
+      align-items: center; 
+      font-size: 14px; 
+      color: #536387; 
+      margin-bottom: 20px; 
+    }
+
+    .formbold-checkbox-label a { 
+      color: #6a64f1; 
+      margin-left: 5px; 
+      text-decoration: none; 
+    }
+
+    .formbold-input-checkbox { margin-right: 10px; }
+
+    .formbold-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 5px;
+      background-color: #6a64f1;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .formbold-btn:hover { background-color: #574fcf; }
+
+    /* ---------- Footer ---------- */
+    .footer4 {
+      width: 100%;
+      background-color: rgb(9, 90, 122);
+      text-align: center;
+      color: #c8d2e3;
+      padding: 10px 0;
+      font-size: 12px;
+      margin-top: auto; /* pushes footer to bottom */
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .formbold-form-wrapper {
+        padding: 20px;
+      }
+
+      .formbold-form-title h2 {
+        font-size: 24px;
+      }
+
+      .formbold-form-input {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="room.html">Room</a>
+      <a href="food.html">Food</a>
+      <a href="payment.html">Payment</a>
+      <a href="Contract.html">Contract</a>
+    </div>
+    <div class="login">
+      <a href="login.html">Login</a>
+      <a href="registation.html">Registration</a>
+    </div>
+  </nav>
+</header>
+
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper">
+    <form action="#" method="POST">
+      <div class="formbold-form-title">
+        <h2>Register Now</h2>
+        <p>Fill in the details below to create an account.</p>
+      </div>
+
+      <!-- First Name -->
+      <div class="formbold-form-group">
+        <label for="firstname" class="formbold-form-label">First Name</label>
+        <input type="text" name="firstname" id="firstname" class="formbold-form-input" />
+      </div>
+
+      <!-- Last Name -->
+      <div class="formbold-form-group">
+        <label for="lastname" class="formbold-form-label">Last Name</label>
+        <input type="text" name="lastname" id="lastname" class="formbold-form-input" />
+      </div>
+
+      <!-- Email -->
+      <div class="formbold-form-group">
+        <label for="email" class="formbold-form-label">Email</label>
+        <input type="email" name="email" id="email" class="formbold-form-input" />
+      </div>
+
+      <!-- Phone -->
+      <div class="formbold-form-group">
+        <label for="phone" class="formbold-form-label">Phone Number</label>
+        <input type="text" name="phone" id="phone" class="formbold-form-input" />
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="formbold-form-group">
+        <label for="dob" class="formbold-form-label">Date of Birth</label>
+        <input type="date" name="dob" id="dob" class="formbold-form-input" />
+      </div>
+
+      <!-- Password -->
+      <div class="formbold-form-group">
+        <label for="password" class="formbold-form-label">Password</label>
+        <input type="password" name="password" id="password" class="formbold-form-input" />
+      </div>
+
+      <!-- Terms Checkbox -->
+      <div class="formbold-checkbox-wrapper">
+        <label for="supportCheckbox" class="formbold-checkbox-label">
+          <input type="checkbox" id="supportCheckbox" class="formbold-input-checkbox" />
+          I agree to the <a href="#">terms & conditions</a>
+        </label>
+      </div>
+
+      <button class="formbold-btn" type="submit">Register Now</button>
+    </form>
+  </div>
+</div>
+
+<div class="footer4">
+  <h2>&copy; 2025 Bangladesh Open University. All Rights Reserved.</h2>
+</div>
+
+</body>
+</html>
