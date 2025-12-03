@@ -64,3 +64,43 @@ Ensure you have:
 ```bash
 git clone https://github.com/nayanhossainbd/bouhostel.git
 cd bouhostel
+```
+2. Create & Activate Virtual Environment
+```
+python -m venv venv
+source venv/bin/activate       # Linux/macOS
+
+# OR (for Windows)
+.\venv\Scripts\activate
+```
+3. Install Dependencies
+```
+pip install django
+
+(Install additional packages as needed: pillow, python-decouple, etc.)
+```
+4. Database Setup
+```
+Run migrations:
+
+python manage.py makemigrations
+python manage.py migrate
+
+```
+5. Create Superuser
+```
+python manage.py createsuperuser
+```
+7. Run the Application
+```
+python manage.py runserver
+```
+
+Visit the application at:
+```
+👉 http://127.0.0.1:8000/
+```
+🤝 Contribution
+
+Contributions are welcome and appreciated!
+
