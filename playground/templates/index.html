@@ -1,0 +1,29 @@
+ {% extends 'layout.html' %}
+  {% load static %}
+  {% block content %}
+     
+    <!-- Wrap -->
+    <div class="row ">
+        <!-- list item -->
+        <div class=" container list">
+            <div class="item">
+                    {% load static %}
+                <!-- <img src="{% static 'images/bg.jpg' %}"> -->
+                <div class="content">
+                    <div class="author">OPEN UNIVERSITY</div>
+                    <div class="title">ABU SAID HALL</div>
+                    <div class="topic">DETAILS</div>
+                    <div class="des">
+                        <!-- Description Around 70 Words -->
+                       Abu Said Hall is a modern, well-managed student residence that ensures a comfortable and peaceful living environment. It provides clean and well-furnished rooms, hygienic and nutritious dining facilities, and all essential amenities for students. The hall focuses on maintaining discipline, safety, and a friendly atmosphere where students can study and grow effectively. It serves as a perfect balance between academic life and healthy daily living.
+                    </div>
+                    <div class="buttons">
+                        <a href="rooms.html">SEE MORE</a>
+                        <a href="admin/register.html">BOOKING</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+   {% endblock %}

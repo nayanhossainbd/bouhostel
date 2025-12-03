@@ -1,0 +1,70 @@
+    <!-- base.html -->
+    {% load static %}
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+      <title>{% block title %}BOU Hostel Management System{% endblock %}</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    
+      {% block extra_css %}{% endblock %}
+    </head>
+
+    <body>
+      <div id="navbar">
+        <!-- Navbar Design  -->
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" >{{ project_name}}</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li><a href="" class="nav-link px-2 text-white">Home</a></li>
+                  <li><a href="rooms.html" class="nav-link px-2 text-white">Rooms</a></li>
+                  <li><a href="foods.html" class="nav-link px-2 text-white">Foods</a></li>
+                  <li><a href="about.html" class="nav-link px-2 text-white">About</a></li>
+                  <li><a href="contact.html" class="nav-link px-2 text-white">Contact Us</a></li>
+                </ul>
+                <div class="d-flex">
+                  <a href="admin/login.html" class="btn btn-secondary me-2">Login</a>
+                  <a href="admin/register.html" class="btn  btn-secondary">Register</a>
+                </div>
+              </div>
+          </nav>
+        </div>
+
+        {% block navbar %}
+        {% endblock %}
+      </div>
+      <div id="content">
+
+        {% block content %}
+        {% endblock %}
+      </div>
+
+      <div id="footer">
+        <footer class="text-body-grey py-1">
+          <div class="container">
+            <p class="float-end mb-1"><a href="#">Back to top</a></p>
+            <p class="mb-1">
+              &copy; BOU Hostel Management System. Ready to Serve the hospitality 24/7 New to here? read our getting
+              started <a href="#">guide</a>.
+            </p>
+
+          </div>
+        </footer>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+      </script>
+      <script src="{% static 'js/base.js' %}"></script>
+      {% block extra_js %}{% endblock %}
+    </body>
+
+    </html>
