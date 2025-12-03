@@ -1,49 +1,66 @@
-# BOUHostel — University Hostel Management System 🏠
+# 🌐 BOU Hostel Management System  
+*A University-Level Digital Hostel Administration Platform*
 
-**BOUHostel** is a university-level hostel management system originally built by **nayanhossainbd**.  
-It aims to digitize and streamline hostel administration: managing students, rooms, meals, and overall hostel operations.
+![GitHub repo size](https://img.shields.io/github/repo-size/nayanhossainbd/bouhostel?color=blue)
+![GitHub stars](https://img.shields.io/github/stars/nayanhossainbd/bouhostel?style=social)
+![GitHub forks](https://img.shields.io/github/forks/nayanhossainbd/bouhostel?style=social)
+![GitHub License](https://img.shields.io/github/license/nayanhossainbd/bouhostel)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 
-## 🚀 Features
+---
 
-- Student / resident management (profiles, room history, etc.)  
-- Room allocation and status tracking (available, occupied, maintenance)  
-- Meal / mess management: daily meal scheduling and attendance tracking  
-- Meal billing and mess fee management (if configured)  
-- Utility bills and financial record management  
-- Reporting and administrative tools for hostel staff  
-- Web-based interface using Django + HTML/CSS  
+## 📘 Overview
 
-## 🧰 Technology Stack
+The **BOU Hostel Management System** is a comprehensive university-level digital platform designed to modernize and streamline hostel administration tasks.  
+Developed for academic purposes, it simplifies the management of **students, rooms, meals, billing, and administrative operations**.
 
-| Layer            | Tech / Framework            |
-|------------------|-----------------------------|
-| Backend          | **Python** + **Django**      |
-| Database         | SQLite (default)            |
-| Frontend         | HTML5 & CSS3                |
+---
 
-*(Note: The project appears to be using SQLite by default, but can be adapted to other DBs per Django’s configuration.)*
+## ✨ Features
 
-## 📦 Installation & Setup Guide
+### 👤 Student Management
+- Enrollment and tracking of current & past hostel residents  
+- Complete student profiles (contact details, department, ID)  
+- Room history & allocation records  
 
-To get the project running locally:
+### 🛏️ Room & Allocation Management
+- Real-time room status (Available / Occupied / Maintenance)  
+- Efficient room assignment workflow  
+- Hostel capacity monitoring  
 
+### 🍽️ Meal / Mess System
+- Daily menu creation  
+- Meal attendance tracking  
+- Automatic mess bill calculation  
+
+### ⚙️ Hostel Administration Tools
+- Staff and utility bill management  
+- Expense & financial tracking  
+- Administrative reports and insights  
+
+---
+
+## 🚀 Technology Stack
+
+| Category        | Technology      | Description                                      |
+|-----------------|------------------|--------------------------------------------------|
+| **Backend**     | Python           | Core programming language                        |
+| **Framework**   | Django           | High-level Python web framework                  |
+| **Database**    | SQLite           | Default database for development                 |
+| **Frontend**    | HTML5 & CSS3     | Standard web UI technologies                     |
+
+---
+
+## 📦 Installation & Setup
+
+### **Prerequisites**
+Ensure you have:
+- **Python 3.x**
+- (Recommended) A virtual environment system like `venv`
+
+---
+
+### **1. Clone the Repository**
 ```bash
 git clone https://github.com/nayanhossainbd/bouhostel.git
 cd bouhostel
-
-# (Optionally) create & activate a virtual environment
-python -m venv venv
-source venv/bin/activate    # On Windows: .\venv\Scripts\activate
-
-# Install Python dependencies
-pip install -r requirements.txt  # or install Django manually
-
-# Apply database migrations
-python manage.py makemigrations
-python manage.py migrate
-
-# (Optional) Create a superuser for Django admin
-python manage.py createsuperuser
-
-# Start the development server
-python manage.py runserver
