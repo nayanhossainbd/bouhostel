@@ -38,7 +38,7 @@ body {
     position: relative;
 }
 .list {
-    
+    position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -55,12 +55,6 @@ body {
 
 /* ---------- Content Box ---------- */
 .item .content {
-    position: absolute;
-    top: 20%;
-    width: 1140px;
-    max-width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 30px;
     box-sizing: border-box;
     color: white;
