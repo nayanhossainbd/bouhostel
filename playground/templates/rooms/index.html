@@ -1,0 +1,48 @@
+ {% extends 'layout.html' %}
+ {% load static %}
+ {% block content %}
+ <div class="album py-5">
+   <div class="container">
+     <div class="text-center mb-4">
+       <h1 class="fw-bold">Rooms We Have</h1>
+       <p class="text-muted mb-0">Compare options across Breakfast, Lunch, and Dinner</p>
+     </div>
+
+
+     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+     
+
+      {% for room in room_list %}   
+       <div class="col">
+         <div class="card shadow-sm">
+        
+          {% if room.image %}
+              <img src="{{ room.image.url }}" alt="{{ room.name }}"class="bd-placeholder-img card-img-top"
+              height="225" width="100%" />
+          {% else %}
+          <img src="{% static 'images/room1.jpg' %}" alt="{{ room.name }}" class="bd-placeholder-img card-img-top"
+          height="225" width="100%" />
+          {% endif %}
+          
+           <div class="card-body">
+             <p class="card-text">
+              {{ room.description }}
+             </p>
+             <div class="d-flex justify-content-between align-items-center">
+               <div class="btn-group">
+                <a href="{% url 'room_detail' room.id %}" class="btn btn-outline-secondary border-0 px-3 py-1">View</a>
+                <a href="{% url 'buy_room' room.id %}" class="btn btn-outline-primary border-0 px-3 py-1 border-start">Buy</a>
+               </div>
+               <small class="text-body-secondary">Tk.{{ room.price }}BDT</small>
+             </div>
+           </div>
+         </div>
+       </div>
+ 
+       {% endfor %}
+ 
+     </div>
+   </div>
+ </div>
+ </main>
+ {% endblock %}

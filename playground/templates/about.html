@@ -3,23 +3,109 @@
   {% block content %}
      
     <main>
-      <section class="py-5 text-center container">
-        <div class="row py-lg-5">
-          <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Album example</h1>
-            <p class="lead text-body-secondary">
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don’t simply skip over it entirely.
-            </p>
-            <p>
-              <a href="#" class="btn btn-primary my-2">Main call to action</a>
-              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-            </p>
-          </div>
-        </div>
-      </section>
-  
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>About HostelM | Community-Driven Budget Travel</title>
+          <!-- Bootstrap 5 CSS -->
+          <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+          <style>
+              .hero-section { background: linear-gradient(rgba(144, 211, 228, 0.6), rgba(0,0,0,0.6)), url('hostel-hero.jpg') center/cover; padding: 100px 0; color: white; }
+              .feature-icon { font-size: 2.5rem; color: #ff5a5f; }
+              .section-padding { padding: 80px 0; }
+              .bg-light-grey { background-color: #f8f9fa; }
+          </style>
+      </head>
+      <body>
+      
+          <!-- 1. Strategic Hero Section -->
+          <section class="hero-section text-center">
+              <div class="container">
+                  <h1 class="display-4 fw-bold">More Than Just a Bed</h1>
+                  <p class="lead mb-4">Discover the heart of the city at HostelM—where travelers become a community.</p>
+                  <a href="#booking" class="btn btn-secondary btn-lg px-5 shadow">Book Your Stay</a>
+              </div>
+          </section>
+      
+          <!-- 2. Our Mission & Story (Brand Narrative) -->
+          <section class="section-padding container">
+              <div class="row align-items-center">
+                  <div class="col-lg-6">
+                      <h2 class="mb-4">The HostelM Story</h2>
+                      <p>Founded by backpackers for backpackers, <strong>HostelM</strong> was built on the belief that travel should be affordable, social, and authentic. We bridge the gap between low-cost dorms and high-end boutique experiences.</p>
+                      <p>Whether you're a solo adventurer or a digital nomad, we provide the infrastructure—and the vibe—for your next great story.</p>
+                  </div>
+                  <div class="col-lg-6">
+                      <img src="{% static 'images/bg.jpg' %}" class="img-fluid rounded shadow" alt="HostelM Community">
+                  </div>
+              </div>
+          </section>
+      
+          <!-- 3. Unique Selling Propositions (Amenities) -->
+          <section class="section-padding bg-light-grey text-center">
+              <div class="container">
+                  <h2 class="mb-5">Why Choose HostelM?</h2>
+                  <div class="row g-4">
+                      <div class="col-md-4">
+                          <div class="p-4 border rounded bg-white h-100 shadow-sm">
+                              <div class="feature-icon mb-3"> <i class="bi bi-geo"></i></div>
+                              <h4>Prime Location</h4>
+                              <p>5-minute walk to Central Station and the city's best nightlife.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="p-4 border rounded bg-white h-100 shadow-sm">
+                              <div class="feature-icon mb-3">🛡️</div>
+                              <h4>Safety & Security</h4>
+                              <p>24/7 reception, keycard access, and private lockers in every room.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="p-4 border rounded bg-white h-100 shadow-sm">
+                              <div class="feature-icon mb-3">💻</div>
+                              <h4>Digital Nomad Ready</h4>
+                              <p>High-speed 1Gbps Wi-Fi and dedicated quiet coworking zones.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      
+          <!-- 4. Community & Events -->
+          <section class="section-padding container text-center">
+              <h2 class="mb-3">Never Travel Alone</h2>
+              <p class="text-muted mb-5">Join our weekly organized events to meet fellow travelers.</p>
+              <div class="row g-3">
+                  <div class="col-md-3"><div class="badge bg-primary p-3 w-100">Pub Crawls</div></div>
+                  <div class="col-md-3"><div class="badge bg-success p-3 w-100">City Walking Tours</div></div>
+                  <div class="col-md-3"><div class="badge bg-warning text-dark p-3 w-100">Family Dinners</div></div>
+                  <div class="col-md-3"><div class="badge bg-info p-3 w-100">Rooftop Yoga</div></div>
+              </div>
+          </section>
+      
+          <!-- 5. Social Proof (Testimonials) -->
+          <section class="section-padding bg-dark text-white">
+              <div class="container text-center">
+                  <h2 class="mb-5">What Explorers Say</h2>
+                  <div class="row">
+                      <div class="col-lg-8 mx-auto">
+                          <blockquote class="blockquote">
+                              <p class="mb-4">"The best hostel kitchen I've ever used and a vibe that makes it impossible not to make friends. I stayed for two nights and stayed for ten!"</p>
+                              <footer class="blockquote-footer text-white-50">Alex Rivera, <cite title="Source Title">Solo Traveler</cite></footer>
+                          </blockquote>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      
+         
+          <!-- Bootstrap 5 JS Bundle -->
+          <script src="https://cdn.jsdelivr.net"></script>
+      </body>
+      </html>
+      
     </main>
 
     

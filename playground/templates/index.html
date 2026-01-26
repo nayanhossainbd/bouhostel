@@ -2,8 +2,8 @@
   {% load static %}
   {% block content %}
      
-    <!-- Wrap -->
-    <div class="container  ">
+  <div class="homepage pt-5">
+    <div class="container ">
         <!-- list item -->
         <div class=" row list">
             <div class="item">
@@ -17,13 +17,43 @@
                         <!-- Description Around 70 Words -->
                        Abu Said Hall is a modern, well-managed student residence that ensures a comfortable and peaceful living environment. It provides clean and well-furnished rooms, hygienic and nutritious dining facilities, and all essential amenities for students. The hall focuses on maintaining discipline, safety, and a friendly atmosphere where students can study and grow effectively. It serves as a perfect balance between academic life and healthy daily living.
                     </div>
-                    <div class="buttons">
-                        <a href="rooms.html">SEE MORE</a>
-                        <a href="admin/register.html">BOOKING</a>
-                    </div>
+
+
+                    <section class="container  mt-5">
+                        <div class="booking-bar">
+                            <form class="row g-3 align-items-end">
+                                <div class="col-md-3">
+                                    <label class="form-label fw-bold">Check-in</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <label class="form-label fw-bold">Check-out</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label fw-bold">Guests</label>
+                                    <select class="form-select">
+                                        <option>1 Guest</option><option>2 Guests</option><option>Group (4+)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">  
+                                    
+                                  <button type=" submit" class=" btn btn-primary"> Check Availability</button>
+                                 </div>
+                            </form>
+                        </div>
+                    </section>
+                  
                 </div>
             </div>
             
         </div>
     </div>
+
+  </div>  <!-- Wrap -->
+
+
+
+
+
    {% endblock %}

@@ -5,26 +5,34 @@
 a {
     text-decoration: none;
 }
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background-image: url(../images/bg.jpg);
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
     /* height: 100vh; */
     overflow-x: scroll;
 
+
 }
 
-.navbar{
+.homepage {
+
+    background-image: url(../images/bg.jpg);
+}
+
+
+.navbar {
     background-color: #d0e2e7;
     box-shadow: 0 4px 8px 0 rgba(158, 136, 136, 0.2), 0 6px 20px 0 rgba(163, 121, 121, 0.19);
     background-color: transparent;
 }
-.login{
+
+.login {
     float: left;
     margin-top: -28px;
     padding-left: 1300px;
@@ -33,10 +41,11 @@ body {
 
 /* ---------- Carousel ---------- */
 .wrap {
-   
+
     overflow: hidden;
     position: relative;
 }
+
 .list {
     position: relative;
     width: 100%;
@@ -87,7 +96,7 @@ body {
 }
 
 .item .topic {
-    color:white;
+    color: white;
 }
 
 .item .des {
@@ -97,15 +106,18 @@ body {
 }
 
 /* ---------- Buttons ---------- */
-.item .buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
+
+.booking-bar {
+    margin-top: 40px;
+    padding-top: 40px;
+    /* background: white; */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: -50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.item .buttons a {
+.buttons button {
     border: none;
     background-color: #eee;
     letter-spacing: 3px;
@@ -165,56 +177,117 @@ nav :nth-child(5),
 .list .item:nth-child(1) .content .title {
     animation-delay: 1.2s !important;
 }
+
 .list .item:nth-child(1) .content .topic {
     animation-delay: 1.4s !important;
 }
+
 .list .item:nth-child(1) .content .des {
     animation-delay: 1.6s !important;
 }
+
 .list .item:nth-child(1) .content .buttons {
     animation-delay: 1.8s !important;
 }
- .menu-section h3 {
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-    .menu-card {
-      border: 1px solid #eee;
-      border-radius: 0.75rem;
-      padding: 1rem;
-      background: #fff;
-      transition: box-shadow .2s ease;
-    }
-    .menu-card:hover {
-      box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    }
-    .menu-img {
-      width: 96px;
-      height: 96px;
-      object-fit: cover;
-    }
-    .menu-price {
-      color: #dc3545; /* Bootstrap text-danger color */
-      font-weight: 700;
-      margin-left: .5rem;
-    }
-    .menu-desc {
-      color: #6c757d; /* Bootstrap text-muted color */
-      font-size: .95rem;
-    }
-    /* Optional: align columns on large screens, stack on small */
-    .menu-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    .maps_view {
-      border-radius: 15px;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .album {
-     border-radius: 15px;
-        background-color: #dfefff;
-    }
+
+.menu-section h3 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.menu-card {
+    border: 1px solid #eee;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background: #fff;
+    transition: box-shadow .2s ease;
+}
+
+.menu-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+}
+
+.menu-img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+}
+
+.menu-price {
+    color: #dc3545;
+    /* Bootstrap text-danger color */
+    font-weight: 700;
+    margin-left: .5rem;
+}
+
+.menu-desc {
+    color: #6c757d;
+    /* Bootstrap text-muted color */
+    font-size: .95rem;
+}
+
+/* Optional: align columns on large screens, stack on small */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.maps_view {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.album {
+    border-radius: 15px;
+    background-color: #dfefff;
+}
+
+.mainmenu {
+    background: url("../images/header_stock.png") center center fixed;
+    /* color: #FFF; */
+    /* height: 100vh; */
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -msn-background-size: cover;
+    width: 100%;
+}
+
+.mainmenu .overlay {
+    background: rgba(0, 0, 0, 0.58);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.mainmenu .navbar-expand-lg {
+    background-color: transparent !important;
+    border-color: transparent;
+    background-image: none;
+    box-shadow: none;
+}
+
+.mainmenu .navbar-expand-lg .navbar-brand {
+
+    font-weight: bold;
+    color: #FFF;
+}
+
+.mainmenu .navbar-expand-lg .navbar-nav>li>a {
+    /* font-size:20px;  */
+    color: #fff;
+    border-bottom: 1px solid transparent
+}
+
+.mainmenu .navbar-expand-lg .navbar-nav>li:hover a {
+    color: #333;
+    border-bottom: 1px solid #FFF
+}

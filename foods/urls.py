@@ -1,9 +1,8 @@
-
-
-from django.contrib.auth import views
-from foods import views
 from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('foods_list/', views.foods_list, name='foods_list'),
+    # The name 'food_list' is what you use in {% url 'food_list' %}
+    path('foods/', views.food_list, name='food_list'),
+    path('food/<int:food_id>/', views.food_detail, name='food_detail'),
 ]

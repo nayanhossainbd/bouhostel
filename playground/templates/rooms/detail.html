@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="modal fade" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Room Details </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="{% static 'images/room3.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="{% static 'images/room1.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="{% static 'images/room2.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="modal-info">
+                  <h3>{{ room.name }}</h3>
+                  <p>{{ room.description }}</p>
+
+                   <p> Availibility: {{ room.is_available|yesno:"Yes,No" }} </p>
+                  <h4>Price: Tk. {{ room.rate_per_bed }} BDT per Bed</h4>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+        <div class="col-lg-6">
+            <img src="{{ room.image.url }}" class="img-fluid rounded-4 shadow-lg" alt="{{ room.name }}">
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+            <span class="badge bg-primary mb-2">{{ room.category.name }}</span>
+            <h1 class="display-4 fw-bold">{{ room.name }}</h1>
+            <p class="lead text-muted">{{ room.long_description }}</p>
+            <h2 class="text-success mb-4">Tk. {{ room.price }} BDT</h2>
+            
+            <a href="{% url 'buy_room' room.id %}" class="btn btn-primary btn-lg px-5 rounded-pill shadow">
+                Book This Room Now
+            </a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
