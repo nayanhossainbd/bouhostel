@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 text-center">
+            <div class="position-relative d-inline-block">
+                <img src="{{ food.image.url }}" class="img-fluid rounded-circle shadow-lg border border-5 border-white" 
+                     style="width: 400px; height: 400px; object-fit: cover;" alt="{{ food.name }}">
+                <div class="badge bg-danger position-absolute top-0 end-0 p-3 rounded-circle fs-5 shadow">
+                    Fresh
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 ps-lg-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'food_list' %}">Menu</a></li>
+                    <li class="breadcrumb-item active">{{ food.category.name }}</li>
+                </ol>
+            </nav>
+
+            <h1 class="display-4 fw-bold mb-3">{{ food.name }}</h1>
+            <p class="text-muted mb-4 fs-5">{{ food.ingredients }}</p>
+
+            <form action="{% url 'order_food' food.id %}" method="POST" class="bg-white p-4 rounded-4 shadow-sm border">
+                {% csrf_token %}
+                
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Select Size:</label>
+                    <div class="d-flex gap-3">
+                        <div class="flex-fill">
+                            <input type="radio" class="btn-check" name="size" value="medium" id="med" checked>
+                            <label class="btn btn-outline-danger w-100 py-3" for="med">
+                                <strong>Medium</strong><br>Tk. {{ food.medium_price }}
+                            </label>
+                        </div>
+                        <div class="flex-fill">
+                            <input type="radio" class="btn-check" name="size" value="large" id="lrg">
+                            <label class="btn btn-outline-danger w-100 py-3" for="lrg">
+                                <strong>Large</strong><br>Tk. {{ food.large_price }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-end">
+                    <div class="col-4">
+                        <label class="form-label fw-bold">Quantity:</label>
+                        <input type="number" name="quantity" class="form-control form-control-lg" value="1" min="1">
+                    </div>
+                    <div class="col-8">
+                       
+                       
+                       
+                    {% if user.is_authenticated %}
+                        <button type="submit" class="btn btn-danger w-100 rounded-pill">Order Now</button>
+                    {% else %}
+                        <a href="{% url 'login' %}?next={{ request.path }}" class="btn btn-outline-secondary w-100 rounded-pill">
+                            Login to Order
+                        </a>
+                    {% endif %}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

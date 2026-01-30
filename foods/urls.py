@@ -5,4 +5,6 @@ urlpatterns = [
     # The name 'food_list' is what you use in {% url 'food_list' %}
     path('foods/', views.food_list, name='food_list'),
     path('food/<int:food_id>/', views.food_detail, name='food_detail'),
+    path('foods/foodcategory/<int:category_id>/', views.food_by_category, name='food_by_category'),
 ]
+

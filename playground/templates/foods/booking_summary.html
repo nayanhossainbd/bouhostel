@@ -1,0 +1,10 @@
+<h3>Food Orders</h3>
+<table class="table">
+    {% for key, item in request.session.food_order.items %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}x</td>
+        <td>Tk. {{ item.total }}</td>
+    </tr>
+    {% endfor %}
+</table>

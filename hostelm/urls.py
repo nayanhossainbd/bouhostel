@@ -18,9 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
-
-
+from django.contrib.auth import views as auth_views
+from playground import views as pg_views 
+from playground import views
 
 
 admin.site.site_header = "BOUHostel"
@@ -31,11 +31,19 @@ admin.site.index_title = "Welcome to BOUHostel Portal"
 urlpatterns = [
 
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('register/', pg_views.register, name='register'),
     path('', include('playground.urls')),
     # path('', include('admin_adminlte.urls'))
     path('rooms/', include('rooms.urls')),
     path('students/', include('students.urls')),
     path('foods/', include('foods.urls')),
+    path('profile/', views.profile_view, name='profile'),
+    path('password-change/', auth_views.PasswordChangeView.as_view(
+        template_name='registration/password_change.html',
+        success_url='/profile/'
+    ), name='password_change'),
+    path('', include('playground.urls')),   
 
 ]
 if settings.DEBUG:

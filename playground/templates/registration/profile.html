@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow border-0 p-4 rounded-4">
+                <h4 class="fw-bold">My Profile</h4>
+                <p class="text-muted">Username: {{ user.username }}</p>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="small fw-bold">Phone Number</label>
+                        <input type="text" name="phone" class="form-control" value="{{ user.profile.phone }}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="small fw-bold">Address</label>
+                        <textarea name="address" class="form-control">{{ user.profile.address }}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 rounded-pill">Update Info</button>
+                </form>
+                <hr>
+                <a href="{% url 'password_change' %}" class="btn btn-outline-dark btn-sm w-100 rounded-pill">Change Password</a>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card shadow border-0 p-4 rounded-4">
+                <h4 class="fw-bold mb-4">Order History</h4>
+                
+                <h5>🍔 Food Orders</h5>
+                <div class="table-responsive mb-4">
+                    <table class="table small">
+                        <thead><tr><th>Date</th><th>Items</th><th>Total</th></tr></thead>
+                        <tbody>
+                            {% for order in food_history %}
+                            <tr>
+                                <td>{{ order.order_date|date:"d M Y" }}</td>
+                                <td>{{ order.items_summary }}</td>
+                                <td>Tk.{{ order.total_amount }}</td>
+                            </tr>
+                            {% empty %}
+                            <tr><td colspan="3">No food orders yet.</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5>🏨 Room Bookings</h5>
+                <ul class="list-group">
+                    {% for room in room_history %}
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>{{ room.room_name }}</span>
+                        <span class="text-muted small">{{ room.booking_date|date:"d M Y" }}</span>
+                    </li>
+                    {% empty %}
+                    <li class="list-group-item text-muted">No room bookings yet.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

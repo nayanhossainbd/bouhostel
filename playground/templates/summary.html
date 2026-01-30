@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="fw-bold mb-4">Finalize Your Orders</h2>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 rounded-4 p-4 h-100">
+                <h4 class="mb-3">🍔 Food Items</h4>
+                {% if request.session.food_order %}
+                    <ul class="list-group list-group-flush mb-3">
+                        {% for key, item in request.session.food_order.items %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            {{ item.name }} (x{{ item.quantity }})
+                            <span class="fw-bold">Tk. {{ item.total }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{% url 'checkout_food' %}" class="btn btn-danger w-100 rounded-pill">Confirm Food Order</a>
+                {% else %}
+                    <p class="text-muted">No food in cart.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 rounded-4 p-4 h-100">
+                <h4 class="mb-3">🏨 Room Bookings</h4>
+                {% if request.session.booking_cart %}
+                    <ul class="list-group list-group-flush mb-3">
+                        {% for key, details in request.session.booking_cart.items %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            {{ details.name }}
+                            <span class="fw-bold">Tk. {{ details.price }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{% url 'checkout_room' %}" class="btn btn-primary w-100 rounded-pill">Confirm Room Booking</a>
+                {% else %}
+                    <p class="text-muted">No rooms selected.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

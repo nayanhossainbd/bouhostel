@@ -291,3 +291,56 @@ nav :nth-child(5),
     color: #333;
     border-bottom: 1px solid #FFF
 }
+.pizza-header {
+    background-color: var(--brand-red);
+    color: white;
+    padding: 10px 60px 10px 30px;
+    border-radius: 0 50px 50px 0;
+    display: inline-block;
+    font-weight: 800;
+}
+
+/* Custom Card Styles */
+.pizza-card {
+    border: 2px solid #000 !important;
+    margin-top: 100px; /* Space for the overlapping image */
+    transition: transform 0.3s ease;
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Overlapping Circular Image */
+.pizza-img-top {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: -100px; /* Pulls image up */
+    border-radius: 50%;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+/* Red Pricing Pill */
+.price-pill {
+    background-color: var(--brand-red);
+    border-radius: 50px;
+    position: relative;
+}
+
+.dollar-tag {
+    background-color: var(--brand-yellow);
+    color: #000;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
